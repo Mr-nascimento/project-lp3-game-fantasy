@@ -1,0 +1,8 @@
+1	Turquia	TUR	Eda Erdem Dündar	Giovanni Guidetti
+2	Servia	SRB	Ana Bjelica	Daniele Santarelli
+3	Brasil	BRA	Gabriela Braga Guimaraes	JOSÉ ROBERTO GUIMARAES
+4	Italia	ITA	Miryam Fatime Sylla	Davide Mazzanti
+5	Tailandia	THA	Pornpun Guedpard	Danai Sriwacharamaytakul
+6	China	CHN	Xinyue Yuan	BIN CAI
+7	Japao	JPN	Sarina Koga	Masayoshi MANABE
+8	Estados Unidos da America	USA	Kelsey Robinson	Karch Kiraly

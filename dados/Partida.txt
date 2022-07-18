@@ -1,0 +1,6 @@
+1	Quartas de final - VNL 2022 - Feminino	Brasil	3x1	3	7
+2	Quartas de final - VNL 2022 - Feminino	Servia	2x3	8	2
+3	Quartas de final - VNL 2022 - Feminino	Italia	3x1	4	6
+4	Quartas de final - VNL 2022 - Feminino	Turquia	3x1	1	5
+5	Semifinal - VNL 2022 - Feminino	Italia	0x3	1	4
+6	Semifinal - VNL 2022 - Feminino	Brasil	1x3	2	3
