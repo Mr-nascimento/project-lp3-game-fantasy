@@ -84,7 +84,7 @@ public class Levantador extends Jogador{
     public void setErrAtk(short errAtk) {
         this.errAtk = errAtk;
     }
-    public void setAtaque(short Atk, short errAtk){
+    public void setAtaque(short Atk,short tentAtk,short errAtk){
         this.atk = Atk;
         this.errAtk = errAtk;
     }

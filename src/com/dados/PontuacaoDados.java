@@ -40,6 +40,7 @@ public class PontuacaoDados {
     }
 
 
+
     public boolean existPontuacao(int idPart, int idJogd){
         for (Pontuacao ponts : pts) {
             if(ponts.getId_jogador()==idJogd && ponts.getId_partida()==idPart)
@@ -53,6 +54,14 @@ public class PontuacaoDados {
                 return ponts;
         }
         return null;
+    }
+    public List<Pontuacao> buscPontuacoes(int idPart) {
+        List<Pontuacao> listPts = new ArrayList<>();
+        for (Pontuacao ponts : pts) {
+            if(ponts.getId_partida()==idPart)
+                listPts.add(ponts);
+        }
+        return listPts;
     }
 
     public List<Pontuacao> getPontuacoes() {

@@ -1,5 +1,11 @@
 package com.cartola.classes;
 
+import com.cartola.obj.Pontuacao;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public abstract class Jogador {
     private String nome;
     private byte numero;
@@ -117,7 +123,54 @@ public abstract class Jogador {
     };
     public abstract void setDefesas(short def, short errDef);
     public abstract void setRecepcao(short recReg, short recPerf, short recErr);
-    public abstract void setAtaque(short Atk, short errAtk);
+    public abstract void setAtaque(short Atk,short tentAtk, short errAtk);
     public abstract void setSaque(short saque, short errSaque);
     public abstract void setBloqueio(short bck, short errBlock);
+
+    public void setPontuacao(Pontuacao pont){
+        this.setDefesas(pont.getDefesa(), pont.getErr_defesa());
+        this.setRecepcao((short)(pont.getBom_recep()+pont.getErr_recep()+pont.getPerf_recep()), pont.getPerf_recep(), pont.getErr_recep());
+        this.setAtaque(pont.getPts_ataque(), pont.getTent_ataque(),pont.getErr_ataque());
+        this.setSaque(pont.getErr_saque(), pont.getErr_saque());
+        this.setBloqueio(pont.getErr_block(), pont.getErr_block());
+    }
+
+    public double calcPreco(){
+        return (this.preco*0.6) + (this.pontuacao*0.4);
+    }
+    public static List<Jogador> ordenaJogs(List<Atacante> atc, List<Levantador> lev , List<Libero> lib){
+        List<Jogador> jogs=new ArrayList<>();
+        int i=0,j=0,k=0;
+        int idA=0,idLV=0, idLib=0;
+        while(i<atc.size() || j<lev.size() || k<lib.size()){
+            if(i<atc.size())
+                idA = atc.get(i).getId();
+            if(j<lev.size())
+                idLV = lev.get(j).getId();
+            if(k<lib.size()) {
+                idLib = lib.get(k).getId();
+            }
+
+            //i e menor
+                //tds existem
+                //i so j exis
+                //i so k exs
+                //i so ele exit
+            if(((j==lev.size() && k==lib.size())) || (i<atc.size() && idA<idLV && k==lib.size())
+                || (i<atc.size() && idA<idLib && j==lev.size()) || (i<atc.size() && idA<idLib && idA<idLV)){
+                jogs.add(atc.get(i));
+                i++;
+            }else if(((i==atc.size() && k==lib.size())) || (j<lev.size() && idLV<idA && k==lib.size())
+                    || (j<lev.size() && idLV<idLib && i==atc.size()) || (j<lev.size() && idLV<idLib && idLV<idA)){
+                jogs.add(lev.get(j));
+                j++;
+            }else if((i==atc.size() && j==lev.size()) || (k<lib.size() && idLib<idA && j==lev.size())
+                    || (k<lib.size() && idLib<idLV && i==atc.size()) || (k<lib.size() && idLib<idLV && idLib<idA)){
+                jogs.add(lib.get(k));
+                k++;
+            }
+
+        }
+        return jogs;
+    }
 }

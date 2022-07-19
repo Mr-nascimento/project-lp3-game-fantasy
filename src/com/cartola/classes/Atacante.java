@@ -65,8 +65,9 @@ public class Atacante extends Jogador {
     public void setTentAtk(short tentAtk) {
         this.tentAtk = tentAtk;
     }
-    public void setAtaque(short Atk, short errAtk){
+    public void setAtaque(short Atk,short tentAtk,short errAtk){
         this.atk = Atk;
+        this.tentAtk = tentAtk;
         this.errAtk = errAtk;
     }
 

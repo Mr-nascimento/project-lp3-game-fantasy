@@ -9,7 +9,7 @@ import java.util.Random;
 import java.lang.Math;
 
 public class GeradorPontos {
-    private boolean ganhador;
+    /*private boolean ganhador;
     private short[][] pontA = new short[7][13];
     private short[][] pontB  = new short[7][13];
     private String result;
@@ -84,6 +84,7 @@ public class GeradorPontos {
         //17.5errSaque;
         //12.5recepErr;
         //20errDef;
+    /*
         int ptsA, ptsB, ptsErrA, ptsErrB;
         int sets;
 
@@ -264,7 +265,7 @@ public class GeradorPontos {
           [9]recp. okay ; [10]err de recep; [11]defesa ; [12]erro de defesa
 
           2 ponteiros, 1 oposto, 2 centrais, 1 levantador, 1 libero
-        */
+        *//*
         for (int i=0;i<7;i++){
             if ((plyrs[i] instanceof Libero)) { //so defende
                 ((Libero) plyrs[i]).setRecepcao(pontA[6][9], pontA[6][8],pontA[6][10]);
@@ -362,5 +363,5 @@ public class GeradorPontos {
             }
         }
     }
-
+    */
 }

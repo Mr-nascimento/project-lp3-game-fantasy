@@ -77,7 +77,7 @@ public class Libero extends Jogador{
         this.errDef = errDef;
     }
 
-    public void setAtaque(short Atk, short errAtk){
+    public void setAtaque(short Atk, short tentAtk, short errAtk){
         return;
     }
     public void setSaque(short saque, short errSaque){

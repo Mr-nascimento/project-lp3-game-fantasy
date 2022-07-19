@@ -145,7 +145,7 @@ public class MeuTime {
             if(jgdrs[i].getId()==id){
                 jgdrs[i].setDefesas(pts.getDefesa(), pts.getErr_defesa());
                 jgdrs[i].setRecepcao((short) (pts.getPerf_recep()+pts.getErr_recep()+ pts.getBom_recep()), pts.getPerf_recep(),pts.getErr_recep());
-                jgdrs[i].setAtaque(pts.getPts_ataque(), pts.getErr_ataque());
+                jgdrs[i].setAtaque(pts.getPts_ataque(), pts.getTent_ataque(), pts.getErr_ataque());
                 jgdrs[i].setSaque(pts.getPts_saque(), pts.getErr_saque());
                 jgdrs[i].setBloqueio(pts.getPts_block(), pts.getErr_block());
             }

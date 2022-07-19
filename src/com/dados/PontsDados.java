@@ -1,5 +1,6 @@
 package com.dados;
 
+import com.cartola.classes.Jogador;
 import com.cartola.classes.Time;
 
 import java.io.*;
@@ -43,22 +44,52 @@ public class PontsDados {
         return null;
     }
 
-    public void rescPont(int id, int pre, int pont) throws IOException {
-        OutputStream os = new FileOutputStream("dados/temp.txt"); // nome do arquivo que será escrito
-        Writer wr = new OutputStreamWriter(os); // criação de um escritor
-        BufferedWriter br = new BufferedWriter(wr); // adiciono a um escritor de buffer
+    public void editPont(int id, double pre, double pont, int modo) throws IOException {
+        try {
+            boolean str = true;
+            String linha = id+"\t"+ pont+"\t"+pre+"\n";
+            switch (modo){
+                case 1:
+                    str = false;
+                    break;
+                case 2:
+                    linha = id+"\t"+ pont+"\t"+pre;
+                    break;
+                case 3:
+                    break;
+                default:
+                    System.out.println("ERRO!!");
+                    break;
+            }
+            File file = new File("dados/Mercado.txt");
+            // Verifica se o arquivo existe
+            // Se não existir será criado.
+            if (!file.exists()) {
+                file.createNewFile();
+            }
 
-        br.write(String.valueOf(id)+"\t"+String.valueOf(pont)+"\t"+String.valueOf(pre));
-        br.newLine();
-        br.close();
+            // Segundo parâmetro da Classe FileWriter(String, boolean)
+            // define se é para adicionar conteúdo ao final do arquivo (true)
+            // senão sobrescreve td o conteudo
+            FileWriter fileWritter = new FileWriter(file.getPath(), str);
+            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+            bufferWritter.write(linha);
+            bufferWritter.flush();
+            bufferWritter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-
-        File temp = new File("dados/temp.txt");
-        Dados.renameTo(temp);
-        temp = new File("dados/Mercado.txt");
-        temp.delete();
-
-
+    }
+    public void editPont(List<Jogador> jog) throws IOException {
+        for (int i=0;i<jog.size();i++) {
+            if(i==0) //primeira linha
+                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 1);
+            else if(i==jog.size()-1) //ultima linha
+                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 2);
+            else //default
+                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 3);
+        }
     }
 
     public List<String> getStrings() {

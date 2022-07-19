@@ -37,7 +37,7 @@ public class LevantadorDados{
              scr = scanM.nextLine();
              parts = linha.split("\t");
              partsMerc = scr.split("\t");
-             if (parts[3].equals("com.cartola.classes.Levantador")) {
+             if (parts[3].equals("Levantador")) {
                  selTime = times.buscTime(Integer.parseInt(parts[4]));
                  temp = new Levantador(Integer.parseInt(parts[0]), parts[1], Byte.parseByte(parts[2]),
                          parts[3], selTime.getSigla());

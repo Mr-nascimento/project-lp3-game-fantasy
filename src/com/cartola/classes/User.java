@@ -6,11 +6,18 @@ public class User {
     private double ptRodada;
     private double din;
 
+
+    public User(Equipe team, double ptTotal, double ptRodada, double din) {
+        this.team = team;
+        this.ptTotal = ptTotal;
+        this.ptRodada = ptRodada;
+        this.din = din;
+    }
     public User(){
-        team = new Equipe();
-        din = 100;
-        ptTotal = 0;
-        ptRodada = 0;
+        this(new Equipe(), 0,0,100);
+    }
+    public User(User outroUsuario){
+        this(outroUsuario.team, outroUsuario.ptTotal, outroUsuario.ptRodada, outroUsuario.din);
     }
 
     public Equipe getTeam() {
