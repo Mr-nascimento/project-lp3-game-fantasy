@@ -23,6 +23,155 @@
 24	Ofelia Malinov	5	com.cartola.classes.Levantador	4
 25	Alessia Gennari	3	Ponteiro	4
 26	Sara Bonifacio	4	Central	4
-27	Monica De Gennaro	6	com.cartola.classes.Libero	4
-28	Eleonora Fersino	7	com.cartola.classes.Libero	4
+27	Monica De Gennaro	6	Libero	4
+28	Eleonora Fersino	7	Libero	4
 29	Sylvia Chinelo Nwakalor	15	Oposto	4
+30	Hancock Micha	1	Levantador	8
+31	Poulter Jordyn	2	Levantador	8
+32	Plummer Kathryn	3	Ponteiro	8
+33	Wong-Orantes Justine	4	Libero	8
+34	Hentz Morgan	5	Libero	8
+35	Dixon Tetori	6	Central	8
+36	Carlini Lauren	7	Levantador	8
+37	Tapp Hannah	8	Central	8
+38	Rishel Madison Kingdon	9	Ponteiro	8
+39	Butler Brionne	10	Central	8
+40	Drews Andrea	11	Oposto	8
+41	Thompson Jordan	12	Oposto	8
+42	Wilhite Sarah	13	Ponteiro	8
+43	Washington Haleigh	15	Central	8
+44	Rettke Dana	16	Central	8
+45	Drews Danielle	17	Ponteiro	8
+46	Bajema Kara	18	Ponteiro	8
+47	Gray Jenna	19	Levantador	8
+48	Cuttino Danielle	20	Oposto	8
+49	White Kendall	22	Libero	8
+50	Robinson Kelsey	23	Ponteiro	8
+51	Ogbogu Chiaka	24	Central	8
+52	Frantti Alexandra	30	Ponteiro	8
+53	Stevenson Anna	31	Central	8
+54	Reed Nia	33	Oposto	8
+55	Silva Milka Marcília Medeiros	1	Central	3
+56	Duarte Alecrim Diana	2	Central	3
+57	Gambatto Kudiess Julia	3	Central	3
+58	Da Silva Ana Carolina	4	Central	3
+59	Zalewski Daroit Moreira Priscila	5	Ponteiro	3
+60	Alexandre Costa Nunes Nyeme Victoria	6	Libero	3
+61	Montibeller Rosamaria	7	Ponteiro	3
+62	Silva Carneiro Macris Fernanda	8	Levantador	3
+63	Ratzke Roberta Silva	9	Levantador	3
+64	Braga Guimaraes Gabriela	10	Ponteiro	3
+65	Barbosa De Souza Karina	11	Ponteiro	3
+66	Menezes Oliveira de Souza Ana Cristina	12	Ponteiro	3
+67	Clemente Kasiely	13	Ponteiro	3
+68	Araujo Natália	14	Libero	3
+69	Viezel Lorena Giovana	15	Central	3
+70	Kisy Nascimento	16	Oposto	3
+71	Bergmann Julia Isabelle	17	Ponteiro	3
+72	Araujo De Souza Mayany Cristina	18	Central	3
+73	Lemes Santos Tainara	19	Ponteiro	3
+74	Da Silva Lorrayna	20	Oposto	3
+75	Malachias Kenya	21	Levantador	3
+76	Bueno da Silva Claudia	22	Levantador	3
+77	Honorio Marques Bruna	23	Oposto	3
+78	Geraldo Teixeira Lorenne	24	Oposto	3
+79	Vasques Lais	25	Libero	3
+80	Busa Bianka	1	Ponteiro	2
+81	Lazovic Katarina	2	Ponteiro	2
+82	Caric Sara	3	Oposto	2
+83	Drca Bojana	4	Levantador	2
+84	Popovic Mina	5	Central	2
+85	Jaksic Ana	7	Levantador	2
+86	Mirkovic Sladjana	8	Levantador	2
+87	Mihajlovic Brankica	9	Ponteiro	2
+88	Pusic Teodora	12	Libero	2
+89	Bjelica Ana	13	Oposto	2
+90	Aleksic Maja	14	Central	2
+91	Stevanovic Jovana	15	Central	2
+92	Milojevic Tijana	17	Libero	2
+93	Milenkovic Bojana	19	Ponteiro	2
+94	Zelenovic Jovana	20	Oposto	2
+95	Kocic Jovana	21	Central	2
+96	Lozo Sara	22	Oposto	2
+97	Djordjevic Mila	23	Levantador	2
+98	Markovic Bozica	25	Central	2
+99	Savic Vanja	26	Oposto	2
+100	Delic Jelena	28	Central	2
+101	Djurdjevic Sanja	31	Libero	2
+102	Cvetkovic Jovana	33	Ponteiro	2
+103	Mirosavljevic Jovana	34	Ponteiro	2
+104	Mijatovic Mina	35	Ponteiro	2
+105	Srithong Wipawee	1	Ponteiro	5
+106	Pannoy Piyanut	2	Libero	5
+107	Guedpard Pornpun	3	Levantador	5
+108	Nuekjang Thatdao	4	Central	5
+109	Thipachot Kannika	6	Ponteiro	5
+110	Jarat Hathairat	7	Central	5
+111	Nuanjam Watchareeya	8	Central	5
+112	Bundasak Jarasporn	9	Central	5
+113	Juangjan Pattiya	10	Ponteiro	5
+114	Pinsuwan Khatthalee	11	Ponteiro	5
+115	Bamrungsuk Hattaya	12	Central	5
+116	Jaisaen Natthanicha	13	Levantador	5
+117	Chuewulim Sutadta	14	Ponteiro	5
+118	Kamulthala Kaewkalaya	15	Central	5
+119	Kokram Pimpichaya	16	Oposto	5
+120	Boonlert Tichaya	17	Levantador	5
+121	Kongyot Ajcharaporn	18	Ponteiro	5
+122	Moksri Chatchu-On	19	Ponteiro	5
+123	Pairoj Supattra	20	Libero	5
+124	Sooksod Thanacha	21	Oposto	5
+125	Sanitklang Nattaporn	22	Libero	5
+126	ManaKij Sirima	23	Levantador	5
+127	Boonlert Tichakorn	24	Central	5
+128	Janthawisut Sasipapron	25	Ponteiro	5
+129	Sinpho Donphon	36	Ponteiro	5
+130	Yuan Xinyue	1	Central	6
+131	Diao Linyu	3	Levantador	6
+132	Yang Hanyu	4	Central	6
+133	Gao Yi	5	Central	6
+134	Gong Xiangyu	6	Oposto	6
+135	Wang Yuanyuan	7	Central	6
+136	Jin Ye	8	Ponteiro	6
+137	Wang Yunlu	10	Ponteiro	6
+138	Wang Yizhu	11	Ponteiro	6
+139	Li Yingying	12	Ponteiro	6
+140	Cai Yaqian	13	Levantador	6
+141	Zheng Yixin	14	Central	6
+142	Wang Weiyi	15	Libero	6
+143	Ding Xia	16	Levantador	6
+144	Ni Feifan	17	Libero	6
+145	Miao Yiwen	18	Oposto	6
+146	Chen Peiyan	19	Oposto	6
+147	Wu Mengjie	20	Ponteiro	6
+148	Wang Yifan	21	Ponteiro	6
+149	Xu Jianan	22	Libero	6
+150	Wang Mengjie	23	Libero	6
+151	Zhong Hui	24	Ponteiro	6
+152	Du Qingqing	25	Oposto	6
+153	Wang Wenhan	26	Central	6
+154	Moriya Akane	1	Libero	7
+155	Uchiseto Mami	2	Ponteiro	7
+156	Koga Sarina	3	Ponteiro	7
+157	Ishikawa Mayu	4	Ponteiro	7
+158	Shimamura Haruyo	5	Central	7
+159	Shibata Mika	7	Levantador	7
+160	Miyashita Haruka	8	Levantador	7
+161	Kojima Manami	7	Levantador	7
+162	Inoue Arisa	10	Levantador	7
+163	Kaneda Shuka	13	Ponteiro	7
+164	Okumu Oba Fuyumi Hawi	14	Ponteiro	7
+165	Hayashi Kotona	15	Ponteiro	7
+166	Yamada Nichika	19	Central	7
+167	Fukudome Satomi	22	Libero	7
+168	Yokota Mami	23	Central	7
+169	Matsui Tamaki	24	Levantador	7
+170	Ogawa Erina	25	Central	7
+171	Miyabe Airi	26	Ponteiro	7
+172	Hamamatsu Asuka	28	Central	7
+173	Seki Nanami	30	Levantador	7
+174	Nakagawa Miyu	32	Ponteiro	7
+175	Hirayama Shion	35	Central	7
+176	Miyabe Ameze	37	Ponteiro	7
+177	Sato Yoshino	38	Ponteiro	7
+178	Asano Nanami	39	Central	7

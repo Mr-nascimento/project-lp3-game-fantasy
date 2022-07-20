@@ -2,11 +2,13 @@ package com.cartola.obj;
 
 import com.cartola.classes.*;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class MeuTime {
     private User usuario;
     private Scanner scan = new Scanner(System.in);
+
 
     public MeuTime(User usuario){
         this.usuario = usuario;
@@ -26,7 +28,7 @@ public class MeuTime {
         System.out.println("Libero:\t\t"+ usuario.getTeam().getLibr().imprimeJogador(modo));
 
         if(modo==1)
-            System.out.println("\nCapitao: "+usuario.getTeam().getCapitao()+"\n");
+            System.out.println("\nCapitao: "+usuario.getTeam().buscJogador(usuario.getTeam().getCapitao()).imprimeJogador(1)+"\n");
 
     }
 
@@ -41,16 +43,18 @@ public class MeuTime {
     public Jogador[] getVetorJogadores(){
         Jogador jgr[] = new Jogador[7];
 
-        jgr[0]= (Jogador) usuario.getTeam().getCtrl1();
-        jgr[1]= (Jogador) usuario.getTeam().getCtrl2();
-        jgr[2]= (Jogador) usuario.getTeam().getPont1();
-        jgr[3]= (Jogador) usuario.getTeam().getPont1();
-        jgr[4]= (Jogador) usuario.getTeam().getOpost();
-        jgr[5]= (Jogador) usuario.getTeam().getLvnt();
-        jgr[6]= (Jogador) usuario.getTeam().getLibr();
+        jgr[0]= usuario.getTeam().getCtrl1();
+        jgr[1]= usuario.getTeam().getCtrl2();
+        jgr[2]= usuario.getTeam().getPont1();
+        jgr[3]= usuario.getTeam().getPont2();
+        jgr[4]= usuario.getTeam().getOpost();
+        jgr[5]= usuario.getTeam().getLvnt();
+        jgr[6]= usuario.getTeam().getLibr();
 
         return jgr;
     }
+
+
 
     private boolean checarSaldo(double oldPreco, double preco) {
         double dinheiro = this.usuario.getDinheiro();
@@ -65,10 +69,10 @@ public class MeuTime {
         boolean saldo;
 
         double precoNovo = pontNovo.getPreco();
-        saldo = (modo)?this.checarSaldo(this.usuario.getTeam().getPont1().getPreco(), precoNovo):
+        saldo = (!modo)?this.checarSaldo(this.usuario.getTeam().getPont1().getPreco(), precoNovo):
                 this.checarSaldo(this.usuario.getTeam().getPont2().getPreco(), precoNovo);
         if(saldo){
-            if(modo){
+            if(!modo){
                 this.usuario.setDinheiro((this.usuario.getDinheiro()+this.usuario.getTeam().getPont1().getPreco())-precoNovo);
                 this.usuario.getTeam().setPont1(pontNovo);
             }else{
@@ -83,11 +87,11 @@ public class MeuTime {
     public boolean changeCentral(Atacante ctrlNovo, boolean modo){
         boolean saldo;
         double precoNovo = ctrlNovo.getPreco();
-        saldo = (modo)?this.checarSaldo(this.usuario.getTeam().getPont1().getPreco(), precoNovo):
+        saldo = (!modo)?this.checarSaldo(this.usuario.getTeam().getPont1().getPreco(), precoNovo):
                 this.checarSaldo(this.usuario.getTeam().getPont2().getPreco(), precoNovo);
 
         if(saldo){
-            if(modo){
+            if(!modo){
                 this.usuario.setDinheiro((this.usuario.getDinheiro()+this.usuario.getTeam().getCtrl1().getPreco())-precoNovo);
                 this.usuario.getTeam().setCtrl1(ctrlNovo);
             }else{

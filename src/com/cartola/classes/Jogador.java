@@ -2,9 +2,12 @@ package com.cartola.classes;
 
 import com.cartola.obj.Pontuacao;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 
 public abstract class Jogador {
     private String nome;
@@ -15,6 +18,8 @@ public abstract class Jogador {
     private String time;
     private double pontuacao;
     private double preco;
+
+    private static final DecimalFormat formatacao = new DecimalFormat("0.00") ;
 
     public Jogador(){//jogador default
         this(true, null);
@@ -93,14 +98,14 @@ public abstract class Jogador {
         return pontuacao;
     }
     public void setPontuacao(double pontuacao) {
-        this.pontuacao = pontuacao;
+        this.pontuacao = Double.parseDouble(formatacao.format(pontuacao).replace(",","."));
     }
 
     public double getPreco() {
         return preco;
     }
     public void setPreco(double preco) {
-        this.preco = preco;
+        this.preco = Double.parseDouble(formatacao.format(preco).replace(",","."));
     }
 
     public abstract double calcPonto();
@@ -109,13 +114,13 @@ public abstract class Jogador {
             case 1: //tela de ver time
                 return this.getNumero()+"\t"+this.getNome()+"\t\tTime: "+this.getTime()+"\t\t| pts:"+ this.getPontuacao();
             case 2: // muda time - atual
-                return "ID "+this.getId()+":\t"+this.getNome()+"\t\tTime: "+this.getTime()+"\t\t| pts:"+ this.getPontuacao();
+                return "ID "+this.getId()+":\t"+this.getNome()+"\tTime: "+this.getTime()+"\t| pts:"+ this.getPontuacao();
             case 3: // muda time - opcoes
                 return "ID "+this.getId()+":\t"+this.getNome()+"\t\tTime: "+this.getTime()+"\t\t| pts:"+
-                        this.getPontuacao()+"| preco:"+this.getPreco();
+                        this.getPontuacao()+" | preco:"+this.getPreco();
             case 4://completo jogador
                 return "ID "+this.getId()+":\t\t("+this.getNumero()+") "+this.getNome()+"\t\t"+this.getPosicao()+
-                        "\t\tTime: "+this.getTime()+ "\t\t| pts:"+ this.getPontuacao()+"| preco:"+this.getPreco();
+                        "\t\tTime: "+this.getTime()+ "\t\t| pts:"+ this.getPontuacao()+" | preco:"+this.getPreco();
             default:
                 break;
         }
@@ -127,7 +132,7 @@ public abstract class Jogador {
     public abstract void setSaque(short saque, short errSaque);
     public abstract void setBloqueio(short bck, short errBlock);
 
-    public void setPontuacao(Pontuacao pont){
+    public void setEstatisticas(Pontuacao pont){
         this.setDefesas(pont.getDefesa(), pont.getErr_defesa());
         this.setRecepcao((short)(pont.getBom_recep()+pont.getErr_recep()+pont.getPerf_recep()), pont.getPerf_recep(), pont.getErr_recep());
         this.setAtaque(pont.getPts_ataque(), pont.getTent_ataque(),pont.getErr_ataque());

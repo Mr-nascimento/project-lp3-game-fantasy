@@ -16,6 +16,7 @@ public class PontsDados {
     public PontsDados() throws FileNotFoundException {
         Dados = new File("dados/Mercado.txt");
         scan = new Scanner(Dados);
+        mercad = this.regPrecos();
     }
 
     public List<String> regPrecos() {
@@ -42,6 +43,16 @@ public class PontsDados {
                 return merc;
         }
         return null;
+    }
+    public String[] buscString(int[] id){
+        String[] pontsIds = new String[id.length];
+        for (int i=0;i< id.length;i++){
+            if (this.existString(id[i]))
+                pontsIds[i] = buscString(id[i]);
+            else
+                pontsIds[i]=null;
+        }
+        return pontsIds;
     }
 
     public void editPont(int id, double pre, double pont, int modo) throws IOException {

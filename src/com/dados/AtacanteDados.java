@@ -65,7 +65,6 @@ public class AtacanteDados {
         for (int i = 0; i < atacantes.size(); i++){
             if(atacantes.get(i).getPosicao().equals("Ponteiro")){
                 pntr.add(atacantes.get(i));
-                System.out.print(atacantes.get(i).getPosicao()+" ");
             }
         }
         return pntr;

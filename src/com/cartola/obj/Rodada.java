@@ -5,6 +5,7 @@ import com.dados.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class Rodada {
     private LevantadorDados levDados = new LevantadorDados();
     private List<Pontuacao> pontMatch;
     private PontsDados arq = new PontsDados();
+
 
     private List<Atacante> atcs;
     private List<Levantador> levs;
@@ -46,22 +48,23 @@ public class Rodada {
         Jogador jgr;
         String pos;
         Partida prt = regJogos.buscPartida(idPart);
+        List<Levantador> lev;
 
         for (int i=0;i<pontMatch.size();i++) {
             atual = pts.buscPontuacao(prt.getIdPart(), pontMatch.get(i).getId_jogador());
             if(atcDados.existJogador(pontMatch.get(i).getId_jogador())) {
                 jgr = atcDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setPontuacao(atual);
+                jgr.setEstatisticas(atual);
                 atcs.add((Atacante) jgr);
             }
             else if(levDados.existJogador(pontMatch.get(i).getId_jogador())) {
                 jgr = levDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setPontuacao(atual);
+                jgr.setEstatisticas(atual);
                 levs.add((Levantador) jgr);
             }
             else {
                 jgr = lbrDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setPontuacao(atual);
+                jgr.setEstatisticas(atual);
                 libr.add((Libero) jgr);
             }
         }

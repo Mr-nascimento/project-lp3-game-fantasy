@@ -25,6 +25,24 @@ public class Equipe {
         nome = "Seu time";
     }
 
+    public Jogador buscJogador(int id){
+        if(id==ctrl1.getId())
+            return ctrl1;
+        if(id==ctrl2.getId())
+            return ctrl2;
+        if(id==pont1.getId())
+            return pont1;
+        if(id==pont2.getId())
+            return pont2;
+        if(id==opost.getId())
+            return opost;
+        if(id==lvnt.getId())
+            return lvnt;
+        if(id==libr.getId())
+            return libr;
+        return null;
+    }
+
     public Atacante getCtrl1() {
         return ctrl1;
     }
