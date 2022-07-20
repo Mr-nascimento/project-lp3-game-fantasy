@@ -3,15 +3,15 @@
 4	Zehra Gunes	18	Central	1
 5	Hande Baladin	7	Ponteiro	1
 6	Saliha Sahin	6	Ponteiro	1
-7	Elif Sahin	12	com.cartola.classes.Levantador	1
+7	Elif Sahin	12	Levantador	1
 8	Meryem Boz	13	Oposto	1
 9	Ilkin Aydin	22	Ponteiro	1
 10	Beyza Arici	1	Central	1
-11	Simge Sebnem Akoz	2	com.cartola.classes.Libero	1
-12	Cansu Özbay	3	com.cartola.classes.Levantador	1
+11	Simge Sebnem Akoz	2	Libero	1
+12	Cansu Özbay	3	Levantador	1
 13	Tugba Senoglu	4	Ponteiro	1
 14	Meliha Ismailoglu	9	Ponteiro	1
-15	Ayca Aykac	10	com.cartola.classes.Libero	1
+15	Ayca Aykac	10	Libero	1
 16	Paola Ogechi Egonu	18	Oposto	4
 17	Caterina Chiara Bosetti	9	Ponteiro	4
 18	Cristina Chirichella	10	Central	4
@@ -19,8 +19,8 @@
 20	Elena Pietrini	1	Ponteiro	4
 21	Miryam Fatime Sylla	17	Ponteiro	4
 22	Marina Lubian	1	Central	4
-23	Alessia Orro	8	com.cartola.classes.Levantador	4
-24	Ofelia Malinov	5	com.cartola.classes.Levantador	4
+23	Alessia Orro	8	Levantador	4
+24	Ofelia Malinov	5	Levantador	4
 25	Alessia Gennari	3	Ponteiro	4
 26	Sara Bonifacio	4	Central	4
 27	Monica De Gennaro	6	Libero	4

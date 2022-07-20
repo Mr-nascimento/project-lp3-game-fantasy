@@ -13,15 +13,20 @@ import static com.cartola.classes.Jogador.ordenaJogs;
 
 public class Rodada {
     private int jogosId[];
+
+    //acesso aos dados
     private PartidaDados regJogos = new PartidaDados();
     private PontuacaoDados pts = new PontuacaoDados();
     private AtacanteDados atcDados = new AtacanteDados();
     private LiberoDados lbrDados = new LiberoDados();
     private LevantadorDados levDados = new LevantadorDados();
-    private List<Pontuacao> pontMatch;
     private PontsDados arq = new PontsDados();
 
+    //pontuacao da partida atual
+    private List<Pontuacao> pontMatch;
 
+
+    //lsita de jogadores
     private List<Atacante> atcs;
     private List<Levantador> levs;
     private List<Libero> libr;
@@ -46,26 +51,31 @@ public class Rodada {
     public void makegame(int idPart) throws FileNotFoundException {
         Pontuacao atual;
         Jogador jgr;
-        String pos;
         Partida prt = regJogos.buscPartida(idPart);
-        List<Levantador> lev;
+
 
         for (int i=0;i<pontMatch.size();i++) {
             atual = pts.buscPontuacao(prt.getIdPart(), pontMatch.get(i).getId_jogador());
             if(atcDados.existJogador(pontMatch.get(i).getId_jogador())) {
                 jgr = atcDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setEstatisticas(atual);
-                atcs.add((Atacante) jgr);
+                if(jgr!=null) {
+                    jgr.setEstatisticas(atual);
+                    atcs.add((Atacante) jgr);
+                }
             }
             else if(levDados.existJogador(pontMatch.get(i).getId_jogador())) {
                 jgr = levDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setEstatisticas(atual);
-                levs.add((Levantador) jgr);
+                if(jgr!=null) {
+                    jgr.setEstatisticas(atual);
+                    levs.add((Levantador) jgr);
+                }
             }
             else {
                 jgr = lbrDados.buscJogador(pontMatch.get(i).getId_jogador());
-                jgr.setEstatisticas(atual);
-                libr.add((Libero) jgr);
+                if(jgr!=null) {
+                    jgr.setEstatisticas(atual);
+                    libr.add((Libero) jgr);
+                }
             }
         }
 

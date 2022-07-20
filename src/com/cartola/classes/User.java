@@ -47,8 +47,8 @@ public class User {
                     pos = atual.getPosicao();
 
                     for (int j = 0; j < ponts.length; j++) {
-                        if (Integer.parseInt(ponts[j].split("\t")[0]) == atual.getId()) {
-                            if (ponts[j]!=null) {
+                        if (ponts[j]!=null) {
+                            if (Integer.parseInt(ponts[j].split("\t")[0]) == atual.getId()) {
                                 valAtual = ponts[j].split("\t");
                                 break;
                             }
