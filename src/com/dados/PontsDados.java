@@ -55,10 +55,10 @@ public class PontsDados {
         return pontsIds;
     }
 
-    public void editPont(int id, double pre, double pont, int modo) throws IOException {
+    public void editPont(int id, String pre, String pont, int modo) throws IOException {
         try {
             boolean str = true;
-            String linha = id+"\t"+ pont+"\t"+pre+"\n";
+            String linha = String.valueOf(id)+"\t"+ pont+"\t"+pre+"\n";
             switch (modo){
                 case 1:
                     str = false;
@@ -93,13 +93,22 @@ public class PontsDados {
 
     }
     public void editPont(List<Jogador> jog) throws IOException {
-        for (int i=0;i<jog.size();i++) {
+        int j=0;
+        String[] parts;
+        for (int i=0;i< mercad.size();i++){
+            if(j<jog.size()){
+                if (Integer.parseInt(mercad.get(i).split("\t")[0]) == jog.get(j).getId()) {
+                    mercad.set(i, String.valueOf(jog.get(j).getId()) + "\t" + String.valueOf(jog.get(j).getPreco()) + "\t" + String.valueOf(jog.get(j).getPontuacao()));
+                    j++;
+                }
+            }
+            parts = mercad.get(i).split("\t");
             if(i==0) //primeira linha
-                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 1);
-            else if(i==jog.size()-1) //ultima linha
-                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 2);
+                editPont(Integer.parseInt(parts[0]), parts[2], parts[1], 1);
+            else if(i==mercad.size()-1) //ultima linha
+                editPont(Integer.parseInt(parts[0]), parts[2], parts[1], 2);
             else //default
-                editPont(jog.get(i).getId(), jog.get(i).getPreco(), jog.get(i).getPontuacao(), 3);
+                editPont(Integer.parseInt(parts[0]), parts[2], parts[1], 3);
         }
     }
 

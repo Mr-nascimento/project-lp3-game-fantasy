@@ -116,7 +116,7 @@ public abstract class Jogador {
             case 2: // muda time - atual
                 return "ID "+this.getId()+":\t"+this.getNome()+"\tTime: "+this.getTime()+"\t| pts:"+ this.getPontuacao();
             case 3: // muda time - opcoes
-                return "ID "+this.getId()+":\t"+this.getNome()+"\t\tTime: "+this.getTime()+"\t\t| pts:"+
+                return "ID "+this.getId()+":\t"+this.getNome()+"\tTime: "+this.getTime()+"\t| pts:"+
                         this.getPontuacao()+" | preco:"+this.getPreco();
             case 4://completo jogador
                 return "ID "+this.getId()+":\t\t("+this.getNumero()+") "+this.getNome()+"\t\t"+this.getPosicao()+

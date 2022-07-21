@@ -27,8 +27,12 @@ public class MeuTime {
         System.out.println("Levantador:\t"+ usuario.getTeam().getLvnt().imprimeJogador(modo));
         System.out.println("Libero:\t\t"+ usuario.getTeam().getLibr().imprimeJogador(modo));
 
-        if(modo==1)
-            System.out.println("\nCapitao: "+usuario.getTeam().buscJogador(usuario.getTeam().getCapitao()).imprimeJogador(1)+"\n");
+        if(modo==1) {
+            if(usuario.getTeam().getCapitao()!=0)
+                System.out.println("\nCapitao: " + usuario.getTeam().buscJogador(usuario.getTeam().getCapitao()).imprimeJogador(1) + "\n");
+            else
+                System.out.println("\nCapitao: Sem capitao.\n");
+        }
 
     }
 
